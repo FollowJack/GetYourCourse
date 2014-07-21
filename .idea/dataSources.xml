@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="947696247">
+    <data-source source="LOCAL" name="GetYourCourse dev" uuid="a0174067-8a4a-4fe4-bee5-5536f041b83f">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/mealMixer</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfcedfcfdfd8df9adfd8dfcedfc5dfc7dfcbdfc6dfcfdfdfdfd9df8b</user-password>
+      <libraries>
+        <library>
+          <url>file://$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
