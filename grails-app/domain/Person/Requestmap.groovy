@@ -2,13 +2,15 @@ package Person
 
 class Requestmap {
 
-	String authority
+	String url
+	String configAttribute
 
 	static mapping = {
 		cache true
 	}
 
 	static constraints = {
-		authority blank: false, unique: true
+		url blank: false, unique: true
+		configAttribute blank: false
 	}
 }
