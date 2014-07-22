@@ -1,5 +1,8 @@
 package Courses
 
+import grails.plugins.springsecurity.Secured
+
+@Secured(['User','Admin'])
 class Participant {
 
     Integer id

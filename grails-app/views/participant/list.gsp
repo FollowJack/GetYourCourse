@@ -24,3 +24,31 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="userId" title="${message(code: 'participant.userId.label', default: 'User Id')}" />
+					
+						<g:sortableColumn property="hasPayed" title="${message(code: 'participant.hasPayed.label', default: 'Has Payed')}" />
+					
+						<g:sortableColumn property="registeredDate" title="${message(code: 'participant.registeredDate.label', default: 'Registered Date')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${participantInstanceList}" status="i" var="participantInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${participantInstance.id}">${fieldValue(bean: participantInstance, field: "userId")}</g:link></td>
+					
+						<td><g:formatBoolean boolean="${participantInstance.hasPayed}" /></td>
+					
+						<td><g:formatDate date="${participantInstance.registeredDate}" /></td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${participantInstanceTotal}" />
+			</div>
+		</div>
+	</body>
+</html>

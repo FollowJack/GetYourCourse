@@ -1,5 +1,8 @@
 package Courses
 
+import grails.plugins.springsecurity.Secured
+
+@Secured(['User','Admin'])
 class Course {
 
     Integer id
@@ -11,6 +14,6 @@ class Course {
     static hasMany = [registeredMembers: Participant]
 
     static constraints = {
-        name size: 5..50, blank: false, unique: true
+        name blank: false, unique: true
     }
 }
