@@ -2,7 +2,7 @@ package Courses
 
 import grails.plugins.springsecurity.Secured
 
-@Secured(['User','Admin'])
+
 class Course {
 
     Integer id

@@ -1,15 +1,17 @@
 package Courses
-
+import org.springframework.security.access.annotation.Secured
 import org.springframework.dao.DataIntegrityViolationException
 
 class CourseController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+    @Secured(['User','Admin'])
     def index() {
         redirect(action: "list", params: params)
     }
 
+    @Secured(['User','Admin'])
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         [courseInstanceList: Course.list(params), courseInstanceTotal: Course.count()]
