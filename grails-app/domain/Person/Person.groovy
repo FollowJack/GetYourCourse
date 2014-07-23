@@ -7,6 +7,7 @@ class Person {
 	String username
     String matriculationNumber
 	String password
+    String emailAddress
 	boolean enabled
 	boolean accountExpired
 	boolean accountLocked
@@ -15,6 +16,7 @@ class Person {
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false
+        emailAddress blank: false, unique: true
         matriculationNumber blank: false, unique: true
 	}
 

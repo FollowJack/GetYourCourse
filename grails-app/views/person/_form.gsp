@@ -18,6 +18,14 @@
 	<g:textField name="password" required="" value="${personInstance?.password}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'matriculationNumber', 'error')} required">
+	<label for="matriculationNumber">
+		<g:message code="person.matriculationNumber.label" default="Matriculation Number" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="matriculationNumber" required="" value="${personInstance?.matriculationNumber}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'accountExpired', 'error')} ">
 	<label for="accountExpired">
 		<g:message code="person.accountExpired.label" default="Account Expired" />
@@ -32,6 +40,14 @@
 		
 	</label>
 	<g:checkBox name="accountLocked" value="${personInstance?.accountLocked}" />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'emailAddress', 'error')} ">
+	<label for="emailAddress">
+		<g:message code="person.emailAddress.label" default="Email Address" />
+		
+	</label>
+	<g:textField name="emailAddress" value="${personInstance?.emailAddress}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'enabled', 'error')} ">

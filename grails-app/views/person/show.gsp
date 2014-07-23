@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${personInstance?.matriculationNumber}">
+				<li class="fieldcontain">
+					<span id="matriculationNumber-label" class="property-label"><g:message code="person.matriculationNumber.label" default="Matriculation Number" /></span>
+					
+						<span class="property-value" aria-labelledby="matriculationNumber-label"><g:fieldValue bean="${personInstance}" field="matriculationNumber"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${personInstance?.accountExpired}">
 				<li class="fieldcontain">
 					<span id="accountExpired-label" class="property-label"><g:message code="person.accountExpired.label" default="Account Expired" /></span>
@@ -55,6 +64,15 @@
 					<span id="accountLocked-label" class="property-label"><g:message code="person.accountLocked.label" default="Account Locked" /></span>
 					
 						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${personInstance?.accountLocked}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.emailAddress}">
+				<li class="fieldcontain">
+					<span id="emailAddress-label" class="property-label"><g:message code="person.emailAddress.label" default="Email Address" /></span>
+					
+						<span class="property-value" aria-labelledby="emailAddress-label"><g:fieldValue bean="${personInstance}" field="emailAddress"/></span>
 					
 				</li>
 				</g:if>
